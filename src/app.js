@@ -1,6 +1,4 @@
-import './utils/global.js'
-
-import 'dotenv/config.js';
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import adicionarRotas from './rotas.js';

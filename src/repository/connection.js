@@ -1,11 +1,14 @@
 import mysql from 'mysql2/promise';
 
 const con = await mysql.createConnection({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PWD,
-    database: process.env.MYSQL_DB,
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PSW,
+    database: process.env.DB,
 });
 
-console.log('-->conexao com bd realizado');
+console.log(`Host: ${process.env.HOST}
+User: ${process.env.USER}
+Senha: ${process.env.PSW}
+Database: ${process.env.DB}`);
 export default con;
