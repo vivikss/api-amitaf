@@ -15,3 +15,22 @@ endpoints.post('/criar', autenticar, async (req, resp) => {
 
 export default endpoints;
 
+endpoints.post('/add/servico', autenticar, async (req, resp) => {
+    let servico = req.body;
+    let id = await db.criarservico(servico);
+
+    resp.send({
+        idservico: id
+    })
+})
+
+endpoints.put('/mudar/servico', autenticar, async (req, resp) => {
+    let id = req.query
+    let servico = req.body;
+    let resposta = await db.criarservico(servico, id);
+
+    resp.send({
+        idservico: resposta
+    })
+})
+
