@@ -16,3 +16,17 @@ export async function verificarUser(user) {
     return resposta;
 }
 
+const database = require('../config/database');
+
+const criarItem = async (nome, preco, forma_pagamento) => {
+  // lógica para criar item no banco de dados
+};
+
+const listarItens = async () => {
+  // lógica para listar itens no banco de dados
+};
+
+module.exports = {
+  criarItem,
+  listarItens,
+};

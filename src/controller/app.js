@@ -1,5 +1,6 @@
 import * as db from "../repository/app.js";
 import { autenticar } from "../auth/jwt.js";
+const itemRoutes = require('./routes/itemRoutes');
  
 import { Router } from "express";
 const endpoints = Router();
@@ -34,3 +35,17 @@ endpoints.put('/mudar/servico', autenticar, async (req, resp) => {
     })
 })
 
+const itemModel = require('../models/itemModel');
+
+const criarItem = async (req, res) => {
+  // lógica para criar item
+};
+
+const listarItens = async (req, res) => {
+  // lógica para listar itens
+};
+
+module.exports = {
+  criarItem,
+  listarItens,
+};

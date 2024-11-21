@@ -1,5 +1,6 @@
 import con from './connection.js'
 
+
 export async function criarservico(servico) {
     let comando = "INSERT INTO procedimento (tipo, descricao, valor) VALUES (?, ?, ?)"
     let resposta = await con.query(comando, [servico.tipo, servico.descricao, servico.valor]);
